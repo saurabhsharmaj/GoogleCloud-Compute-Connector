@@ -54,13 +54,13 @@ public class ComputeEngineSample {
   private static final String APPLICATION_NAME = "";
 
   /** Set PROJECT_ID to your Project ID from the Overview pane in the Developers console. */
-  private static final String PROJECT_ID = "amp-dev-249107";
+  private static final String PROJECT_ID = "gc-dev-249107";
 
   /** Set Compute Engine zone. */
   private static final String ZONE_NAME = "us-central1-a";
 
   /** Set the name of the sample VM instance to be created. */
-  private static final String SAMPLE_INSTANCE_NAME = "amp-dev-test1";
+  private static final String SAMPLE_INSTANCE_NAME = "gc-dev-test1";
 
   /** Set the path of the OS image for the sample VM instance to be created.  */
   private static final String SOURCE_IMAGE_PREFIX = "https://www.googleapis.com/compute/v1/projects/";
@@ -86,7 +86,7 @@ public class ComputeEngineSample {
     try {
       httpTransport = GoogleNetHttpTransport.newTrustedTransport();
 
-      InputStream credentialStream = new FileInputStream(new File("D:\\Equinix\\GC\\AMP-DEV-11f998713486.json"));
+      InputStream credentialStream = new FileInputStream(new File("<Credential>.json"));
 	// Authenticate using Google Application Default Credentials.
       GoogleCredential credential = GoogleCredential.fromStream(credentialStream);
       if (credential.createScopedRequired()) {
