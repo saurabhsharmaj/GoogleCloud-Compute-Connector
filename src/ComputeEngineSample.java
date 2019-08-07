@@ -107,21 +107,17 @@ public class ComputeEngineSample {
       // List out instances, looking for the one created by this sample app.
       boolean foundOurInstance = printInstances(compute);
 
-      Operation op;
-      if (foundOurInstance) {
-        op = deleteInstance(compute, SAMPLE_INSTANCE_NAME);
-      } else {
-        op = startInstance(compute, SAMPLE_INSTANCE_NAME);
-      }
-
-      // Call Compute Engine API operation and poll for operation completion status
-      System.out.println("Waiting for operation completion...");
-      Operation.Error error = blockUntilComplete(compute, op, OPERATION_TIMEOUT_MILLIS);
-      if (error == null) {
-        System.out.println("Success!");
-      } else {
-        System.out.println(error.toPrettyString());
-      }
+			/*
+			 * Operation op; if (foundOurInstance) { op = deleteInstance(compute,
+			 * SAMPLE_INSTANCE_NAME); } else { op = startInstance(compute,
+			 * SAMPLE_INSTANCE_NAME); }
+			 * 
+			 * // Call Compute Engine API operation and poll for operation completion status
+			 * System.out.println("Waiting for operation completion..."); Operation.Error
+			 * error = blockUntilComplete(compute, op, OPERATION_TIMEOUT_MILLIS); if (error
+			 * == null) { System.out.println("Success!"); } else {
+			 * System.out.println(error.toPrettyString()); }
+			 */
     } catch (IOException e) {
       System.err.println(e.getMessage());
     } catch (Throwable t) {
